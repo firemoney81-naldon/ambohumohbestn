@@ -1,23 +1,579 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+    <!-- JSON-LD Schema Markup (Optimized for Naver Snippet and Search) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "암보험상품비교 2026: 순위 및 가격, 보장 내용 완벽 분석",
+      "description": "2026년 최신 암보험 상품을 비교하고 추천합니다. 비갱신형/갱신형 암보험의 장단점, 가격, 보장 범위, 가입 순위 등 전문가의 정보를 바탕으로 나에게 맞는 암보험을 찾아보세요.",
+      "url": "https://yourdomain.com/cancer-insurance-comparison",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://yourdomain.com/images/cancer-insurance-hero.jpg"
+      },
+      "lastReviewed": "2026-01-10",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourdomain.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "mainContentOfPage": [
+        {
+          "@type": "Article",
+          "headline": "암보험상품비교, 가입 전 필수 확인사항",
+          "author": {
+            "@type": "Organization",
+            "name": "암보험 전문가 팀"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "암보험 비교센터",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://yourdomain.com/images/logo.png"
+            }
+          },
+          "datePublished": "2026-01-01"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS Reset and Global Styles */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        main {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+        }
+        section {
+            padding: 2rem 0;
+            border-bottom: 1px dashed #e0e6f0;
+        }
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            color: #0a1f44;
+            margin-top: 0;
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            color: #0a1f44;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #e0e6f0;
+            color: #0a1f44;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a3a69;
+        }
+        p {
+            margin-bottom: 1.5rem;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #0a1f44;
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid #007bff;
+        }
+        header .main-logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+        nav a:hover {
+            color: #ffcc00;
+            transform: translateY(-2px);
+        }
+
+        /* Keyword Tags (Optimization for Naver search) */
+        .keyword-tags {
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .keyword-tags a {
+            background-color: #e0f0ff;
+            color: #007bff;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .keyword-tags a:hover {
+            background-color: #b3d1ff;
+            color: #0056b3;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            border: 1px solid #e0e6f0;
+            text-align: center;
+        }
+        .comparison-table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: 700;
+            vertical-align: middle;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #fcfdff;
+        }
+        .comparison-table strong {
+            font-weight: 700;
+            color: #1a3a69;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: block;
+            background-color: #ff6600;
+            color: white;
+            font-weight: 700;
+            padding: 1.2rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 2rem auto;
+            max-width: 400px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+        }
+        .cta-button:hover {
+            background-color: #e65c00;
+            transform: translateY(-2px);
+        }
+
+        /* Input Form for Engagement */
+        .quote-form-section {
+            background-color: #f0f8ff;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .quote-form-section label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a3a69;
+        }
+        .quote-form-section input[type="text"],
+        .quote-form-section input[type="number"],
+        .quote-form-section select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        .quote-form-section button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .quote-form-section button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Accordion (FAQ Section) */
+        .faq-accordion dt {
+            background-color: #eef1f6;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #1a3a69;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+        .faq-accordion dt::before {
+            content: "+";
+            position: absolute;
+            right: 1.5rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        .faq-accordion dt.active {
+            background-color: #dbe4f0;
+            color: #007bff;
+        }
+        .faq-accordion dt.active::before {
+            content: "-";
+            transform: rotate(0deg);
+        }
+        .faq-accordion dd {
+            margin-left: 1.5rem;
+            padding: 0 1.5rem 1rem;
+            background-color: #ffffff;
+            border-left: 3px solid #007bff;
+            display: none;
+            font-size: 0.95rem;
+        }
+        .faq-accordion dt.active + dd {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+            color: #777;
+            background-color: #eef1f6;
+            margin-top: 2rem;
+        }
+
+        /* Utility classes */
+        .text-center { text-align: center; }
+        .highlight { font-weight: bold; color: #ff6600; }
+        .sub-heading { font-size: 1.1rem; font-weight: 600; color: #007bff; margin-top: 1.5rem; }
+        ul, ol { margin-left: 1.5rem; margin-bottom: 1.5rem; }
+    </style>
+
+    <!-- Naver SEO specific meta tags -->
+    <meta name="naver-site-verification" content="[YOUR_NAVER_WEBMASTER_TOOL_CODE]" />
+</head>
+<body>
+
+    <header>
+        <a href="/" class="main-logo">암보험 비교센터</a>
+        <nav>
+            <ul>
+                <li><a href="#intro">암보험이란?</a></li>
+                <li><a href="#comparison-guide">상품 비교 가이드</a></li>
+                <li><a href="#rate-type">갱신 vs 비갱신</a></li>
+                <li><a href="#quote-form-section">맞춤 견적 받기</a></li>
+                <li><a href="#faq">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <!-- Section 1: Introduction and Importance -->
+        <section id="intro">
+            <h1>2026년 암보험상품비교, 현명한 가입을 위한 완벽 가이드</h1>
+            <p class="text-center">
+                최신 암보험 트렌드와 상품별 상세 분석을 통해 고객 맞춤형 암보험을 추천합니다.
+                <br>복잡한 암보험 시장에서 <span class="highlight">암보험 순위</span>와 <span class="highlight">암보험 가격</span>을 투명하게 비교하여 최적의 선택을 돕겠습니다.
+            </p>
+            <div class="keyword-tags" aria-label="연관 검색어">
+                <a href="#comparison-guide">암보험상품비교</a>
+                <a href="#rate-type">비갱신형 암보험</a>
+                <a href="#rate-type">갱신형 암보험</a>
+                <a href="#quote-form-section">암보험료 계산</a>
+                <a href="#comparison-guide">암보험 보장 내용</a>
+                <a href="#coverage-guide">유사암 진단금</a>
+                <a href="#rate-type">암보험 장단점</a>
+                <a href="#cost-saving">암보험 저렴한곳</a>
+                <a href="#coverage-guide">고액암보험</a>
+            </div>
+        </section>
+
+        <!-- Section 2: Core Comparison Guide -->
+        <section id="comparison-guide">
+            <h2>암보험상품비교를 위한 5가지 핵심 가이드</h2>
+            <p>암보험은 질병 특성상 한 번 가입하면 장기간 유지해야 하므로 신중한 선택이 필요합니다. 2026년 시장의 변화를 반영하여, 단순한 <span class="highlight">암보험 가격 비교</span>를 넘어 <span class="highlight">암보험 보장 범위</span>와 <span class="highlight">가입 요령</span>을 중심으로 비교해야 합니다. 아래 5가지 핵심 요소를 기준으로 상품을 분석해 보세요.</p>
+
+            <h3>1. 일반암 진단금 보장 범위 및 금액</h3>
+            <p>암보험의 핵심은 일반암 진단금입니다. 진단금이 클수록 치료비 부담을 줄일 수 있습니다. 중요한 것은 '일반암'의 정의입니다. 최근 많은 보험사가 갑상선암, 기타 피부암, 경계성 종양, 제자리암 등을 <span class="highlight">유사암</span>으로 분류하여 일반암 진단금에서 제외하는 추세입니다. <span class="highlight">암보험상품비교</span> 시, 가입하고자 하는 상품의 약관에서 이 네 가지 유사암이 일반암에 포함되는지 여부를 반드시 확인해야 합니다. 2026년에는 유사암 진단금 한도가 상향 조정되거나 일반암 진단금과 유사하게 책정되는 상품도 등장하고 있으니 이를 꼼꼼히 체크해야 합니다.</p>
+
+            <h3>2. 갱신형 vs 비갱신형 선택 (가장 중요한 차이점)</h3>
+            <p>암보험의 <span class="highlight">장단점</span>을 논할 때 가장 많이 언급되는 것이 갱신형과 비갱신형의 <span class="highlight">차이점</span>입니다. <span class="highlight">비갱신형 암보험</span>은 초기 보험료가 다소 높지만, 정해진 납입 기간 동안 보험료 변동이 없습니다. 반면 <span class="highlight">갱신형 암보험</span>은 초기 보험료가 매우 저렴하지만, 갱신 주기(보통 10년, 20년)마다 보험료가 상승할 수 있습니다. <span class="highlight">암보험료 예상 금액</span>을 산정할 때, 갱신형은 나이가 들수록 보험료 폭탄을 맞을 위험이 있으므로 장기적인 관점에서 <span class="highlight">가입</span>을 결정해야 합니다.</p>
+
+            <h3>3. 고액암 및 소액암 분류 기준</h3>
+            <p>일반암과 별도로 <span class="highlight">고액암</span>(췌장암, 폐암, 뼈암, 뇌암 등)에 대해 추가 진단금을 지급하는 상품이 있습니다. 고액암 진단금은 일반암 진단금의 2~3배 수준으로 설정되는 경우가 많습니다. <span class="highlight">암보험 추천 순위</span>를 따져볼 때, 고액암 보장 특약을 포함하면 혹시 모를 상황에 대비할 수 있습니다. 반면 <span class="highlight">소액암</span>은 갑상선암이나 유방암처럼 상대적으로 치료비용이 적게 드는 암을 지칭하며, 일반암 진단금의 일부만 지급되는 경우가 많았습니다. 하지만 최근에는 소액암 보장 한도가 증가하는 추세입니다.</p>
+
+            <h3>4. 면책기간 및 감액기간 확인</h3>
+            <p>암보험은 가입 즉시 보장이 시작되지 않습니다. <span class="highlight">면책기간</span>은 가입 후 일정 기간(보통 90일) 동안 암 진단을 받아도 보험금이 지급되지 않는 기간을 말합니다. <span class="highlight">감액기간</span>은 면책기간 이후 일정 기간(보통 1~2년) 동안 보험금을 50%만 지급하는 기간입니다. <span class="highlight">암보험 가입</span> 시 이 두 기간을 정확히 이해하고 있어야 합니다. <span class="highlight">암보험 내돈내산 후기</span>를 보면, 이를 인지하지 못해 곤란을 겪는 사례가 많습니다.</p>
+
+            <h3>5. 보험금 지급 방식 및 특약 선택</h3>
+            <p>진단금 외에도 수술비, 입원일당, 항암치료비(방사선/약물 치료) 등 다양한 <span class="highlight">특약</span>이 있습니다. 진단금 일시 지급 방식 외에 매년 지급하는 형태 등도 있으니, <span class="highlight">암보험상품비교</span>를 통해 자신에게 적합한 지급 방식을 선택해야 합니다. 항암 방사선/약물 치료 특약은 고가의 신기술 치료에 대비할 수 있어 최근 <span class="highlight">추천</span>되는 특약 중 하나입니다.</p>
+        </section>
+
+        <!-- Section 3: Detailed Comparison Table and Visualization -->
+        <section id="detailed-comparison">
+            <h2>주요 암보험 상품 2026년 비교 분석</h2>
+            <p>2026년 현재 시장에서 인기 있는 암보험 상품들의 특징을 비교 분석했습니다. <span class="highlight">암보험 순위</span>는 단순히 <span class="highlight">암보험료</span>가 저렴한 곳이 아니라 보장 내용의 충실도와 가성비에 따라 결정됩니다.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">구분</th>
+                        <th colspan="3">핵심 보장 내용</th>
+                        <th rowspan="2">보험료 수준<br>(40세 남성 기준)</th>
+                        <th rowspan="2">특징 및 추천 대상</th>
+                    </tr>
+                    <tr>
+                        <th>일반암 진단금</th>
+                        <th>유사암 진단금</th>
+                        <th>고액암 진단금</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A사 (비갱신형)</td>
+                        <td>5천만원 (100% 보장)</td>
+                        <td>1천만원 (20% 보장)</td>
+                        <td>일반암 진단금의 2배</td>
+                        <td>높음</td>
+                        <td>초기 비용 부담이 적고, 장기적으로 안정적인 보험료를 원하는 40대 이상에게 적합</td>
+                    </tr>
+                    <tr>
+                        <td>B사 (갱신형)</td>
+                        <td>4천만원 (100% 보장)</td>
+                        <td>2천만원 (50% 보장)</td>
+                        <td>고액암 특약 미포함</td>
+                        <td>낮음</td>
+                        <td>단기적인 보장을 원하거나 초기 보험료가 부담스러운 20~30대에게 적합</td>
+                    </tr>
+                    <tr>
+                        <td>C사 (비갱신형)</td>
+                        <td>6천만원 (100% 보장)</td>
+                        <td>2천만원 (33% 보장)</td>
+                        <td>일반암 진단금의 2배</td>
+                        <td>높음 (A사 대비 약간 높음)</td>
+                        <td>보장 한도를 최우선으로 고려하는 고객에게 적합</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="text-center"><em>* 상기 비교는 예시이며, 실제 보험료 및 보장 내용은 가입자의 연령, 성별, 건강 상태, 특약 선택에 따라 달라질 수 있습니다. 정확한 <span class="highlight">암보험료 계산</span>은 전문가 상담을 통해 확인하세요.</em></p>
+            <p><strong>[데이터 시각화 - 갱신형 vs 비갱신형 보험료 추이]</strong></p>
+            <!-- Naver SEO: Graph and image content (though not rendered here, description helps) -->
+            <figure>
+                <img src="https://via.placeholder.com/800x400.png?text=암보험료+갱신형+VS+비갱신형+추이+그래프" alt="나이대별 암보험료 비교 그래프">
+                <figcaption class="text-center">비갱신형은 초기 보험료가 높지만 일정하며, 갱신형은 초기 보험료가 낮지만 나이가 들수록 급격히 상승합니다.</figcaption>
+            </figure>
+
+            <h3 class="sub-heading">암보험료를 절약하는 방법: '저렴한곳'을 찾는 노하우</h3>
+            <p>단순히 <span class="highlight">암보험 저렴한곳</span>을 찾기보다, 불필요한 특약을 제거하고 꼭 필요한 핵심 보장(진단금)에 집중하는 것이 중요합니다. 또한 <span class="highlight">가입</span> 연령이 낮을수록 보험료가 저렴하므로, 젊을 때 가입하는 것이 유리합니다. 여러 보험사를 비교하여 <span class="highlight">가격</span> 경쟁력이 높은 상품을 선택하는 것도 <span class="highlight">암보험료</span> 절약의 핵심입니다.</p>
+        </section>
+
+        <!-- Section 4: In-depth Analysis (Content Expansion) -->
+        <section id="coverage-guide">
+            <h2>보장 내용 심층 분석: 일반암, 유사암, 고액암의 정확한 이해</h2>
+            <p>많은 소비자들이 <span class="highlight">암보험상품비교</span>를 할 때 가장 어려워하는 부분이 보장 범위입니다. 특히 최근 보험사별로 <span class="highlight">유사암</span>에 대한 규정이 다르기 때문에 <span class="highlight">암보험 가입</span> 시 꼼꼼한 확인이 필수입니다.</p>
+
+            <h3>1. 일반암: 암보험의 핵심 보장</h3>
+            <p>일반암은 유방암, 위암, 대장암, 폐암, 간암 등 대부분의 암을 포함합니다. 그러나 2026년 보험 시장에서는 갑상선암, 기타 피부암, 경계성 종양, 제자리암이 <span class="highlight">유사암</span>으로 분류되면서 일반암 진단금에서 제외되는 상품이 많습니다. 이들 유사암은 발병률이 높지만 치료비가 비교적 적게 들어 보험사 입장에서 손해율을 관리하기 위한 조치입니다. <span class="highlight">암보험 추천</span> 시, 일반암 진단금이 높고 유사암을 적절히 보장하는 상품을 선택하는 것이 중요합니다.</p>
+
+            <h3>2. 유사암 진단금: 늘어나는 보장 한도</h3>
+            <p>과거에는 유사암 진단금이 일반암 진단금의 10% 수준이었지만, 2026년에는 보험사들이 유사암 보장을 강화하며 일반암 진단금의 20%~50%까지 확대하는 추세입니다. 이는 <span class="highlight">암보험상품비교</span> 시 큰 변수로 작용합니다. <span class="highlight">유사암</span> 진단금 한도가 높을수록 초기 암 진단 시에도 충분한 보장을 받을 수 있어 유리합니다.</p>
+
+            <h3>3. 고액암: 높은 치료비에 대비하는 선택</h3>
+            <p>고액암은 치료비가 많이 들고 예후가 좋지 않은 암(췌장암, 폐암 등)을 말합니다. <span class="highlight">고액암보험</span> 특약은 일반암 진단금과 별도로 추가 보장을 제공하여, 고액암 진단 시 경제적 부담을 크게 덜어줍니다. <span class="highlight">암보험 장단점</span>을 고려할 때, 가족력이나 생활 습관에 따라 고액암 특약 가입 여부를 신중하게 결정해야 합니다.</p>
+
+            <h3>4. 2026년 암보험 트렌드: 항암 치료 보장 강화</h3>
+            <p>2026년에는 4세대 실손보험 도입과 함께 암보험 시장에서도 새로운 트렌드가 나타나고 있습니다. 특히 고가의 면역항암제나 표적항암제 등 신약 치료비에 대한 보장이 강화되는 추세입니다. <span class="highlight">암보험상품비교</span> 시 진단금 외에도 항암치료비 특약이 충분한지 확인하는 것이 현명합니다. 이는 <span class="highlight">암보험 가입</span>을 결정하는 중요한 요소 중 하나가 되었습니다.</p>
+        </section>
+
+        <!-- Section 5: User Engagement Form (Maximizing Dwell Time) -->
+        <section id="quote-form-section" class="quote-form-section">
+            <h2 class="text-center">맞춤형 암보험료 계산 및 무료 견적 받기</h2>
+            <p class="text-center">간단한 정보 입력으로 여러 보험사의 <span class="highlight">암보험료 예상 금액</span>을 실시간으로 비교하고, 전문 상담사의 <span class="highlight">암보험 추천</span>을 받아보세요.</p>
+            <form action="#result" method="post">
+                <div class="form-group">
+                    <label for="name">이름:</label>
+                    <input type="text" id="name" name="name" placeholder="실명을 입력해주세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">생년월일:</label>
+                    <input type="text" id="birthdate" name="birthdate" placeholder="예: 19800101" required pattern="\d{8}">
+                </div>
+                <div class="form-group">
+                    <label for="gender">성별:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">선택</option>
+                        <option value="male">남성</option>
+                        <option value="female">여성</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">연락처:</label>
+                    <input type="text" id="phone" name="phone" placeholder="예: 01012345678" required pattern="\d{10,11}">
+                </div>
+                <div class="form-group">
+                    <label for="coverage-amount">희망하는 진단금 금액 (일반암):</label>
+                    <select id="coverage-amount" name="coverage-amount" required>
+                        <option value="">선택</option>
+                        <option value="3000">3천만원</option>
+                        <option value="4000">4천만원</option>
+                        <option value="5000">5천만원</option>
+                        <option value="6000">6천만원 이상</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rate-type">희망하는 납입 형태:</label>
+                    <select id="rate-type" name="rate-type" required>
+                        <option value="">선택</option>
+                        <option value="non-renewal">비갱신형 (추천)</option>
+                        <option value="renewal">갱신형</option>
+                        <option value="either">상담 후 결정</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">개인정보 수집 및 이용 동의 (필수)</label>
+                </div>
+                <button type="submit">실시간 암보험료 비교 견적 요청</button>
+            </form>
+        </section>
+
+        <!-- Section 6: User Reviews and Trust Signals -->
+        <section id="reviews">
+            <h2>암보험 가입 후기 및 전문가 의견 (내돈내산 리뷰)</h2>
+            <p><span class="highlight">암보험 내돈내산 후기</span>는 실제 가입자들이 겪은 경험을 바탕으로 하기 때문에 <span class="highlight">암보험상품비교</span>에 중요한 참고 자료가 됩니다. 전문가들은 <span class="highlight">암보험 추천</span> 시 단순히 보험료가 싼 곳을 찾기보다, 보장 내용과 약관을 꼼꼼히 살필 것을 강조합니다.</p>
+
+            <h3>1. 고객 A씨 (40대 남성, 비갱신형 가입 후기)</h3>
+            <p>"처음에는 <span class="highlight">암보험료</span>가 부담스러워 갱신형을 생각했습니다. 하지만 전문가 상담을 통해 장기적으로 비갱신형이 훨씬 유리하다는 것을 알게 되었죠. 40대 초반에 가입해서 고정된 <span class="highlight">보험료</span>로 100세까지 보장받으니 마음이 편합니다. <span class="highlight">암보험 가입</span> 전에 <span class="highlight">암보험 장단점</span>을 정확히 비교해 보는 것이 중요합니다."</p>
+
+            <h3>2. 고객 B씨 (30대 여성, 유사암 보장 후기)</h3>
+            <p>"저는 건강검진에서 혹시 모를 상황을 대비하고 싶어 <span class="highlight">유사암 진단금</span> 보장이 높은 상품을 찾았습니다. <span class="highlight">암보험상품비교</span> 사이트에서 A사와 B사의 <span class="highlight">암보험 차이점</span>을 비교해 보니, B사가 유사암 보장 한도가 높더라고요. <span class="highlight">암보험 순위</span>가 높다고 무조건 좋은 것은 아니며, 본인의 상황에 맞는 상품을 찾는 것이 핵심입니다."</p>
+        </section>
+
+        <!-- Section 7: External Links and Trust Building -->
+        <section id="trust-links">
+            <h2>신뢰성 있는 암보험 정보 출처</h2>
+            <p>암보험 관련 정보는 신뢰할 수 있는 공인된 기관의 자료를 참고하는 것이 중요합니다. 아래는 <span class="highlight">암보험 가입</span>과 <span class="highlight">암보험상품비교</span>에 도움이 되는 외부 기관입니다.</p>
+            <ul>
+                <li><strong>국립암센터</strong>: <a href="http://www.ncc.re.kr/" target="_blank">국립암센터 공식 홈페이지</a> (암 예방, 검진, 치료에 대한 전문적인 정보 제공)</li>
+                <li><strong>금융감독원 금융소비자정보 포털 파인</strong>: <a href="http://fine.fss.or.kr/" target="_blank">보험 상품 비교 공시</a> (객관적인 보험 상품 정보 확인 가능)</li>
+                <li><strong>건강보험심사평가원</strong>: <a href="https://www.hira.or.kr/" target="_blank">병원비, 비급여 진료비 확인</a> (실제 암 치료비용을 예측하는 데 도움)</li>
+                <li><strong>보험개발원</strong>: <a href="https://www.kidi.or.kr/" target="_blank">보험 관련 통계 자료 및 정보 제공</a></li>
+                <li><strong>나무위키 암보험 문서</strong>: <a href="https://namu.wiki/w/%EC%95%94%EB%B3%B4%ED%97%98" target="_blank">암보험의 정의 및 특징 정리</a> (일반적인 정보 참고용)</li>
+            </ul>
+        </section>
+
+        <!-- Section 8: FAQ Accordion -->
+        <section id="faq">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <dl class="faq-accordion">
+                <dt tabindex="0" aria-expanded="false">Q1. 암보험 가입 시기가 따로 있나요?</dt>
+                <dd>A. <span class="highlight">암보험 가입</span>은 빠를수록 유리합니다. 나이가 많아질수록 <span class="highlight">암보험료</span>가 상승하며, 건강 이상이 생기면 가입이 제한되거나 보험료가 할증될 수 있습니다. 30~40대가 <span class="highlight">암보험</span> 가입의 최적 시기로 여겨집니다.</dd>
+
+                <dt tabindex="0" aria-expanded="false">Q2. <span class="highlight">비갱신형</span>과 <span class="highlight">갱신형</span> 중 어떤 것을 선택해야 할까요?</dt>
+                <dd>A. <span class="highlight">비갱신형 암보험</span>은 초기 보험료가 높지만, 납입 기간 동안 보험료 변동 없이 유지되어 장기적인 관점에서 유리합니다. 반면 <span class="highlight">갱신형 암보험</span>은 초기 보험료가 저렴하지만, 나이가 들수록 보험료가 상승합니다. 2026년 기준으로, 장기 유지를 목표로 한다면 <span class="highlight">비갱신형</span>을 <span class="highlight">추천</span>합니다.</dd>
+
+                <dt tabindex="0" aria-expanded="false">Q3. <span class="highlight">암보험상품비교</span> 시 <span class="highlight">유사암 진단금</span>이 왜 중요한가요?</dt>
+                <dd>A. 갑상선암, 기타 피부암 등은 발병률이 높습니다. 과거에는 <span class="highlight">유사암</span> 진단금이 적었지만, 최근에는 보장 한도가 커지고 있습니다. <span class="highlight">암보험 가입</span> 시 일반암 진단금 외에 유사암 진단금 한도도 반드시 <span class="highlight">비교</span>하여, 발병 확률이 높은 유사암에 대한 보장도 꼼꼼히 챙겨야 합니다.</dd>
+
+                <dt tabindex="0" aria-expanded="false">Q4. 기존에 가입한 실손보험이 있어도 <span class="highlight">암보험</span>이 필요한가요?</dt>
+                <dd>A. 실손보험은 실제 병원비를 보장하지만, 진단금은 생활비나 간병비, 기타 비급여 치료에 활용할 수 있습니다. <span class="highlight">암보험 진단금</span>은 치료비 외의 경제적 공백을 메워주므로, 실손보험과는 별개로 <span class="highlight">필수적인 보장</span>으로 간주됩니다.</dd>
+            </dl>
+        </section>
+
+        <!-- Section 9: SEO keyword saturation and conclusion -->
+        <section id="conclusion">
+            <h2>결론: 2026년 <span class="highlight">암보험상품비교</span>의 핵심 정리</h2>
+            <p>2026년 <span class="highlight">암보험</span> 시장은 보장 한도와 분류 기준이 복잡하게 변화하고 있습니다. 단순한 <span class="highlight">암보험 가격</span> <span class="highlight">비교</span>로는 올바른 <span class="highlight">가입</span>이 어렵습니다. <span class="highlight">암보험 추천</span>을 받더라도 <span class="highlight">암보험 순위</span>에 맹신하기보다, 개인의 상황에 맞는 <span class="highlight">암보험 보장 내용</span>을 꼼꼼히 확인해야 합니다. 특히 <span class="highlight">비갱신형 암보험</span>과 <span class="highlight">갱신형 암보험</span>의 <span class="highlight">장단점</span>, <span class="highlight">유사암 진단금</span>, <span class="highlight">면책기간</span>, <span class="highlight">감액기간</span> 등을 전문가와 상담하여 최종 결정을 내리시길 바랍니다.</p>
+            <a href="#quote-form-section" class="cta-button" aria-label="맞춤형 암보험 비교 견적 받기">나에게 맞는 암보험 무료 견적 받기</a>
+        </section>
     </main>
-  </body>
-</html>
+
+    <footer>
+        <p>Copyright &copy; 2026 암보험 비교센터. All rights reserved. | <a href="#">이용약관</a> | <a href="#">개인정보처리방침</a></p>
+    </footer>
+
+    <!-- JavaScript for FAQ Accordion -->
+    <script>
+        document.querySelectorAll('dl.faq-accordion dt').forEach((dt) => {
+            dt.addEventListener('click', () => {
+                const isActive = dt.classList.contains('active');
+                // Close all other open items
+                document.querySelectorAll('dl.faq-accordion dt').forEach((item) => {
+                    item.classList.remove('active');
+                    item.setAttribute('aria-expanded', 'false');
+                });
+
+                // Open current item if it was closed
+                if (!isActive) {
+                    dt.classList.add('active');
+                    dt.setAttribute('aria-expanded', 'true');
+                }
+            });
+            dt.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    dt.click();
+                }
+            });
+        });
+    </script>
+
+
+  
